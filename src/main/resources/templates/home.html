@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html layout:decorate="~{shared/layout}"
+      th:with="currentPage='home'"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <title class="btn">Главная</title>
+</head>
+<body>
+<div class="row" layout:fragment="content">
+    <div class="col-3">
+        Подписки
+    </div>
+    <div class="col-6">
+        Лента
+    </div>
+    <div class="col-3">
+        Обсуждают сейчас
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang=en xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/layout.css}" rel="stylesheet">
+    <script th:href="@{/js/bootstrap.bundle.js}"></script>
+
+    <title data-layout-title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Network</title>
+    </head>
+<body>
+<header layout:fragment="header">
+    <div class="header">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ms-4 me-4 pt-3 pb-3">
+                <a href="/" class="d-flex align-items-center mb-lg-0 text-dark text-decoration-none">
+                    <img class="bi me-2" th:src="@{/svg/logo.svg}"/>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-secondary">Статьи</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Дискуссии</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Категории</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Авторы</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto me-auto mb-lg-0">
+                    <input type="search" class="form-control" placeholder="Найти статью" aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button class="btn btn-success">Войти</button>
+                    <button class="btn btn-outline-success">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container pt-5">
+        <div layout:fragment="content">
+        Page content goes here
+        </div>
+    </div>
+</section>
+
+<footer layout:fragment="custom-footer">
+    <p>footer</p>
+</footer>
+</body>
+</html>
